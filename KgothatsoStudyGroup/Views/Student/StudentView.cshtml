@@ -1,0 +1,34 @@
+﻿
+@model IEnumerable< KgothatsoStudyGroup.Models.StudentInfo>
+
+@{ 
+    ViewBag.Title = "Student Table";
+}
+
+<h2>StudentView</h2>
+
+<table class="TheTable">
+    <tr>
+
+        <th>@Html.DisplayNameFor(model => model.StudentID)</th>
+        <th>@Html.DisplayNameFor(model => model.StudentName)</th>
+        <th>@Html.DisplayNameFor(model => model.StudentSurname)</th>
+        <th>@Html.DisplayNameFor(model => model.StudentEmail)</th>
+        <th></th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.StudentID)</td>
+            <td>@Html.DisplayFor(modelItem => item.StudentName)</td>
+            <td>@Html.DisplayFor(modelItem => item.StudentSurname)</td>
+            <td>@Html.DisplayFor(modelItem => item.StudentEmail)</td>
+        </tr>
+            
+
+     }
+
+</table>
+
